@@ -1,0 +1,148 @@
+/*#5271FF, #FF1616 */
+
+/*General for all pages*/
+body {
+  background-image: linear-gradient(to right, #e0e1e4, #5271ff);
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0rem;
+  padding-bottom: 0rem;
+  font-size: 1.8rem;
+}
+header > h1 {
+  color: #5271ff;
+  text-shadow: 0rem 0rem 1rem;
+  font-size: large;
+}
+
+img#logo {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: inline;
+
+  position: relative;
+  animation-name: logo_move;
+  animation-duration: 8s;
+}
+@keyframes logo_move {
+  0% {
+    transform: rotateZ(30deg);
+  }
+  10% {
+    transform: rotateZ(90deg);
+  }
+  20% {
+    transform: rotateZ(180deg);
+  }
+  30% {
+    transform: rotateZ(270deg);
+  }
+  50% {
+    transform: rotateZ(360deg);
+  }
+  70% {
+    transform: rotateZ(270deg);
+  }
+  80% {
+    transform: rotateZ(180deg);
+  }
+  90% {
+    transform: rotateZ(90deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+/*lOGIN PAGE*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1.6fr 0.4fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "login_page_a login_page_b login_page_b ."
+    "login_page_a login_page_b login_page_b ."
+    ". login_page_b login_page_b ."
+    ". login_page_b login_page_b ."
+    ". login_page_b login_page_b ."
+    ". login_page_b login_page_b ."
+    "login_page_c login_page_c login_page_c login_page_c";
+  width: 117rem;
+  height: 57rem;
+}
+
+.login_page_a {
+  grid-area: login_page_a;
+}
+
+.login_page_b {
+  grid-area: login_page_b;
+}
+
+.login_page_c {
+  grid-area: login_page_c;
+  grid-area: login_page_c;
+  padding-top: 1rem;
+  color: rgb(7, 7, 7);
+  position: fixed;
+  width: 98%;
+  bottom: 10px;
+  grid-area: footer;
+  border: 0.02rem solid rgb(73, 116, 172);
+  font-size: medium;
+}
+
+main.item-b > div {
+  text-align: center;
+}
+
+#login_page_main_form {
+  text-align: center;
+}
+
+#loginErrorMessage {
+  visibility: hidden;
+  color: red;
+}
+
+#login_page_main_form > h2 {
+  text-align: center;
+}
+
+#login_page_main_form div {
+  text-align: center;
+  margin: 2rem;
+}
+
+#login_page_main_form input {
+  font-size: 1.5rem;
+  background-color: #6c7fd6;
+}
+#login_page_main_form select {
+  font-size: 1.8rem;
+  text-align: center;
+  border: none;
+  background-color: #6c7fd6;
+}
+
+#login_page_main_form button {
+  font-size: 1.8rem;
+  text-align: center;
+  border: none;
+  background-color: #6c7fd6;
+}
+
+#login_page_main_form button:hover {
+  background-color: #dee4fc;
+}
+/*************************************/
+/*************************************/
+/*************************************/
+/*************************************/
+
+/***********************************/
+/*VACCINATION STATUS PAGE*/
+
+/************************************/

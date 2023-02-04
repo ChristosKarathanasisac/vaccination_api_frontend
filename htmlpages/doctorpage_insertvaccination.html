@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/style2.css" />
+    <title>Vaccination Plattform</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page_a">
+        <header>
+          <img
+            src="../photos/vacccenter.png"
+            alt="Logo"
+            width="300"
+            height="300"
+            id="logo"
+          />
+        </header>
+        <h1>e-Health Plattform</h1>
+      </div>
+      <div class="page_b">
+        <nav>
+          <ul>
+            <li><a href="doctorpage.html">Appointments</a></li>
+            <li>
+              <a href="doctorpage_inserttimeslot.html">Timeslots</a>
+            </li>
+            <li>
+              <a href="doctorpage_insertvaccination.html">Vaccinations</a>
+            </li>
+	     <li>
+              <a href="index.html">Login Page</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    <main>
+        <div class="page_d">
+          <h2>Insert Vaccination</h2>
+            <label for="docamka">Doctor AMKA:</label>
+            <input type="text" id="docamka" name="docamka" />
+            <label for="citamka">Citizen AMKA:</label>
+            <input type="text" id="citamka" name="docamka" />
+            <label for="timeslot">Vaccination Date:</label>
+            <input type="date" id="vacDate" name="timeslotDatePicker" />
+            <button id="insertvaccination">
+              Insert Vaccination
+            </button>
+            <p id="insertvaccinationresult"></p>
+          </div>
+        </div>
+    <script src="../scripts/insertvaccinationscript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/style2.css" />
+    <title>Vaccination Plattform</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page_a">
+        <header>
+          <img
+            src="../photos/vacccenter.png"
+            alt="Logo"
+            width="300"
+            height="300"
+            id="logo"
+          />
+        </header>
+        <h1>e-Health Plattform</h1>
+      </div>
+      <div class="page_b">
+        <nav>
+          <ul>
+            <li><a href="doctorpage.html">Appointments</a></li>
+            <li>
+              <a href="doctorpage_inserttimeslot.html">Timeslots</a>
+            </li>
+            <li>
+              <a href="doctorpage_insertvaccination.html">Vaccinations</a>
+            </li>
+            <li>
+              <a href="index.html">Login Page</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    <main>
+        <div class="page_d">
+          <h2>Insert Timeslot</h2>
+          <label>Vaccination Center:</label>
+            <select id="VacCentersDropDown"></select>
+            <label for="docamka">AMKA:</label>
+            <input type="text" id="docamka" name="docamka" />
+            <label for="timeslot">Timeslot Date:</label>
+            <input type="date" id="timeslotDate" name="timeslotDatePicker" />
+            <label for="timeslot">Timeslot Start-End Hour:</label>
+            <input
+              type="time"
+              id="timeslotStartTime"
+              name="timeslotStartTimePicker"
+            />
+            <input type="time" id="timeslotEndTime" name="timeslotEndTimePicker" />
+            <button id="inserttimeslot">
+              Insert Timeslot
+            </button>
+            <p id="inserttimeslotresult"></p>
+          </div>
+    <script src="../scripts/inserttimeslotscript.js"></script>
+  </body>
+</html>

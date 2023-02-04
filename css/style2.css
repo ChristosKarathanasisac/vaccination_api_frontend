@@ -1,0 +1,388 @@
+body {
+  background-image: linear-gradient(to right, #e0e1e4, #5271ff);
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0rem;
+  padding-bottom: 0rem;
+  font-size: 1.8rem;
+}
+header > h1 {
+  color: #5271ff;
+  text-shadow: 0rem 0rem 1rem;
+  font-size: large;
+}
+/*
+Grid
+*/
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1.9fr 1.5fr 1fr 0.3fr;
+  gap: 0px 0px;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "page_a page_b page_b"
+    "page_a page_d page_d"
+    "page_c page_d page_d"
+    ". page_d page_d"
+    "page_e page_e page_e";
+  width: 117rem;
+  height: 57rem;
+}
+
+.page_a {
+  grid-area: page_a;
+}
+
+.page_b {
+  grid-area: page_b;
+}
+
+.page_d {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  grid-area: page_d;
+}
+
+.page_c {
+  grid-area: page_c;
+  font-size: 1.2rem;
+}
+
+.page_e {
+  grid-area: page_e;
+}
+
+.page_a h1 {
+  margin-bottom: 10rem;
+  color: rgb(7, 7, 7);
+  text-shadow: 0rem 0rem 1rem;
+  font-size: medium;
+}
+/*Logo style and animation */
+img#logo {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: inline;
+
+  position: relative;
+  animation-name: logo_move;
+  animation-duration: 8s;
+}
+
+@keyframes logo_move {
+  0% {
+    transform: rotateZ(30deg);
+  }
+  10% {
+    transform: rotateZ(90deg);
+  }
+  20% {
+    transform: rotateZ(180deg);
+  }
+  30% {
+    transform: rotateZ(270deg);
+  }
+  50% {
+    transform: rotateZ(360deg);
+  }
+  70% {
+    transform: rotateZ(270deg);
+  }
+  80% {
+    transform: rotateZ(180deg);
+  }
+  90% {
+    transform: rotateZ(90deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+/*Navbar style*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #5271ff;
+  border-radius: 25px;
+  height: 2rem;
+}
+li {
+  float: left;
+}
+
+li a {
+  color: rgb(27, 27, 27);
+  text-align: center;
+  padding-top: 1rem;
+  margin-right: 0.6rem;
+  margin-left: 0.6rem;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: azure;
+}
+
+.page_d h2 {
+  text-align: center;
+  width: 50rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+/*Result Table*/
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+#legendresultsTable {
+  overflow: hidden;
+  background-color: #5271ff;
+  border-radius: 25px;
+  width: 70rem;
+  text-align: left;
+  margin-top: 1.5rem;
+  color: azure;
+}
+#resultsTable {
+  border: 1px;
+  border: 4px;
+  width: 70rem;
+  font-size: 1.2rem;
+}
+
+#resultsTable td {
+  text-align: center;
+  width: 15rem;
+  color: azure;
+}
+#resultsTable tr:hover {
+  background-color: rgb(112, 126, 206);
+}
+#resultsTable th {
+  background-color: #5271ff;
+  color: azure;
+}
+#resultsTable tr {
+  background-color: #5271ff;
+}
+#pagination > button {
+  font-size: 1.1rem;
+  background-color: #5271ff;
+  border: 1rem;
+  margin-right: 0.5rem;
+  color: azure;
+}
+#pagination > button:hover {
+  background-color: white;
+}
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+
+/*Book Vaccination*/
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+#bookVacForm {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+#selectedVaccinationCenter,
+#selectedTimeslotDate,
+#selectedTimeslotHour,
+#selectedTimeslotID,
+#citizenAMKA {
+  font-size: 1.2rem;
+  display: block;
+  width: 15rem;
+  background-color: #5271ff;
+  color: azure;
+}
+#bookVacFormTitle {
+  display: block;
+  font-size: 1.8rem;
+  background-color: #5271ff;
+  border-radius: 25px;
+  text-align: left;
+  color: azure;
+  width: 70rem;
+}
+button#bookAppointment:disabled,
+button#updateAppointment:disabled {
+  background-color: azure;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  color: #5271ff;
+}
+button#bookAppointment,
+button#updateAppointment {
+  background-color: #5271ff;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  color: azure;
+}
+/*#bookVacForm > button {
+  background-color: #5271ff;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  color: azure;
+}
+*/
+#bookAppointment:hover,
+#updateAppointment:hover {
+  background-color: rgb(120, 127, 175);
+}
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+/*Select Timeslot*/
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+#VacCentersDropDown,
+#timeslotByDay,
+#timeslotByMonth {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  background-color: #5271ff;
+}
+#selectTimeslotTitle {
+  display: block;
+  font-size: 1.8rem;
+  background-color: #5271ff;
+  border-radius: 25px;
+  color: azure;
+  width: 30rem;
+  text-align: center;
+}
+#showTimeslotsByDay,
+#showTimeslotsByMonth {
+  background-color: #5271ff;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  color: azure;
+}
+
+/*Result*/
+#bookAppointmentResult {
+  visibility: hidden;
+  color: red;
+  font-size: 1.2rem;
+}
+
+/*************************************************/
+/*************************************************/
+
+/*************************************************/
+/*Vaccination Status Page*/
+/*************************************************/
+#main_vacstatus > #showStatus {
+  display: block;
+}
+#main_vacstatus > #citizenAMKA {
+  display: block;
+  background-color: #5271ff;
+  width: 22rem;
+  height: 1.5rem;
+}
+#main_vacstatus > #status {
+  display: block;
+  background-color: #5271ff;
+  width: 22rem;
+  height: 1.5rem;
+}
+#main_vacstatus > #validuntil {
+  display: block;
+  background-color: #5271ff;
+  width: 22rem;
+  height: 1.5rem;
+}
+#main_vacstatus > #showStatus {
+  font-size: 1.1rem;
+  background-color: #5271ff;
+  margin-top: 2rem;
+}
+#main_vacstatus {
+  margin-left: 10rem;
+}
+#main_vacstatus > h2 {
+  text-align: left;
+}
+#statusresult {
+  visibility: hidden;
+  color: red;
+}
+
+/*************************************************/
+/*************************************************/
+/*************************************************/
+
+/*************************************************/
+/*Doctor Page*/
+/*************************************************/
+#showTodaysAppointments,
+#showAllAppointments {
+  display: block;
+  background-color: #5271ff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+#doctorAMKA {
+  background-color: #5271ff;
+  font-size: 1.2rem;
+}
+
+#searchResult {
+  visibility: hidden;
+  color: red;
+}
+/*************************************************/
+/*************************************************/
+/*************************************************/
+
+/*************************************************/
+/*Insert Timeslot Page*/
+/*************************************************/
+#VacCentersDropDown,
+#docamka,
+#timeslotDate,
+#timeslotStartTime,
+#timeslotEndTime,
+#inserttimeslot {
+  margin-bottom: 1rem;
+  background-color: #5271ff;
+  font-size: 1.3rem;
+  display: block;
+}
+#inserttimeslotresult {
+  visibility: hidden;
+  color: red;
+}
+
+/*************************************************/
+/*************************************************/
+/*************************************************/
+
+/***********************************/
+
+/************************************/
+/*INSERT VACCINATION PAGE*/
+/*************************************************/
+
+/*************************************************/
+/*************************************************/
+#docamka,
+#citamka,
+#vacDate,
+#insertvaccination {
+  margin-top: 1rem;
+  display: block;
+  background-color: #5271ff;
+  font-size: 1.2rem;
+}
+#insertvaccinationresult {
+  font-size: 1.2rem;
+  color: red;
+}

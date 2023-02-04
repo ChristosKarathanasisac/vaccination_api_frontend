@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/style2.css" />
+    <title>Vaccination Plattform</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page_a">
+        <header>
+          <img
+            src="../photos/vacccenter.png"
+            alt="Logo"
+            width="300"
+            height="300"
+            id="logo"
+          />
+        </header>
+        <h1>e-Health Plattform</h1>
+      </div>
+      <div class="page_b">
+        <nav>
+          <ul>
+            <li><a href="doctorpage.html">Appointments</a></li>
+            <li>
+              <a href="doctorpage_inserttimeslot.html">Timeslot</a>
+            </li>
+            <li>
+              <a href="doctorpage_insertvaccination.html">Vaccination</a>
+            </li>
+	     <li>
+              <a href="index.html">Login Page</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="page_c">
+        <!--<main>-->
+        <label for="doctorAMKAAMKA">AMKA*:</label>
+        <input type="text" id="doctorAMKA" />
+        <button id="showTodaysAppointments">Show today's Appointments</button>
+        <button id="showAllAppointments">Show all Appointments</button>
+        <p id="searchResult"></p>
+      </div>
+      <div class="page_d">
+        <h2>Appointments</h2>
+        <table border="1px" id="resultsTable">
+          <tr class="rows">
+            <th width="100">Vaccination Center</th>
+            <th width="100">Date</th>
+            <th width="200">Start Hour</th>
+            <th width="200">End Hour</th>
+          </tr>
+        </table>
+        <div id="pagination"></div>
+      </div>
+    </div>
+    <!--</main>-->
+    <script src="../scripts/doctorspagescript.js"></script>
+  </body>
+</html>
